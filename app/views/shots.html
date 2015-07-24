@@ -1,0 +1,9 @@
+
+<div class="galeria">
+	<div class="galeria-item" ng-repeat="shot in model">
+		<a ng-href="#/shots/{{shot.id}}" title="{{shot.title}}">
+			<img ng-src="{{shot.images.teaser}}" alt="{{shot.title}}" />
+		</a>
+	</div>
+</div>
+

@@ -1,0 +1,33 @@
+<div>
+	<a ng-href="{{model.user.html_url}}" title="{{model.user.name}}">
+		<img ng-src="{{model.user.avatar_url}}" alt="{{model.user.name}}" />
+	</a>
+</div>
+<div>
+	<p><a ng-href="{{model.user.html_url}}" title="{{model.user.name}}">{{model.user.name}}</a></p>
+	<p ng-bind-html="model.user.bio"></p>
+	<div>
+		<ul class="social">
+			<li>
+				<a ng-href="{{model.user.links.twitter}}" title="twitter" ng-if="model.user.links.twitter !== undefined">
+					<div class="col-xs-4 col-sm-3 col-md-2" ><i class="fa fa-twitter fa-3x"></i></div>
+				</a>			
+			</li>
+			<li>
+				<a ng-href="{{model.user.links.web}}" title="web" ng-if="model.user.links.web !== undefined">
+					<div class="col-xs-4 col-sm-3 col-md-2" ><i class="fa fa-globe fa-3x"></i></div>
+				</a>			
+			</li>
+			<li>
+				<a ng-href="{{model.user.html_url}}" title="dribbble" ng-if="model.user.html_url !== undefined">
+					<div class="col-xs-4 col-sm-3 col-md-2" ><i class="fa fa-dribbble fa-3x"></i></div>
+				</a>	
+			</li>
+		</ul>
+	</div>
+</div>
+<div>
+	<div><p ng-bind-html="model.title"></p></div>
+	<div><img ng-src="{{model.images.hidpi}}" alt="{{shot.title}}" /></div>
+	<div><p ng-bind-html="model.description"></p></div>
+</div>
